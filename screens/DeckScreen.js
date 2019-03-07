@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import { View, Text, Platform } from 'react-native';
 import { connect } from 'react-redux';
-import { MapView } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
+// import { MapView } from 'expo';
 import { Card, Button } from 'react-native-elements';
 import Swipe from '../components/Swipe';
 import * as actions from '../actions';
 
 class DeckScreen extends Component {
+  static navigationOptions =  ({ navigation }) => ({
+    title: 'Characters',
+    tabBarIcon: ({ focused, horizontal, tintColor }) => {
+      return <Ionicons name="md-finger-print" size={30} color={tintColor} />
+    }
+  });
+
   renderCard(job) {
     const initialRegion = {
       longitude: -23.669092,

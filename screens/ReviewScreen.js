@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, Platform, ScrollView, Linking } from 'react-native';
+import { View, Text, ScrollView } from 'react-native'; // Platform, Linking
 import { Button, Card } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { MapView } from 'expo';
+//import { Ionicons } from '@expo/vector-icons';
+// import { MapView } from 'expo';
 
 class ReviewScreen extends Component {
-  static navigationOptions =  ({ navigation }) => ({
-    headerTitle: 'Review Jobs',
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: 'Liked Characters',
     headerRight: (
       <Button
         title="Settings"
@@ -14,12 +15,12 @@ class ReviewScreen extends Component {
           navigation.navigate("settings");
         }}
       />
-    )
+    ),
   });
 
   renderLikedJobs() {
     return this.props.likes.map(job => {
-      const { name, text } = job; // url, form attedRelativeTime
+      const { name, text, id, uri } = job; // url, form attedRelativeTime
       // const initialRegion = {
       //   longitude: -23.669092,
       //   latitude: -46.700521,
@@ -29,9 +30,9 @@ class ReviewScreen extends Component {
 
       return (
         <Card
-          title={job.name}
-          key={job.id}
-          image={{ uri: job.uri }}
+          title={name}
+          key={id}
+          image={{ uri }}
           imageStyle={{ height: 200, width: 110, alignSelf: 'center' }}
         >
           <View>

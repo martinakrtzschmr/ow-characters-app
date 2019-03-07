@@ -8,6 +8,7 @@
     "react-native-dependencies": "yarn add --dev @babel/core@^7 babel-preset-expo^5.0 react-native-screens@^1.0 expo-core^2.0 expo-constants^2.0"
   },
   "dependencies": {
+    "@expo/vector-icons": "^9.0.0",
     "axios": "^0.18.0",
     "babel": "^6.23.0",
     "expo": "^32.0.0",
@@ -23,6 +24,7 @@
     "react-navigation": "^3.3.2",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.29.5",
     "yelp-fusion": "^2.2.1"

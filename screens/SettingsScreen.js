@@ -24,4 +24,4 @@ class SettingsScreen  extends Component {
   }
 }
 
-export default connect(null, clearLikedJobs)(SettingsScreen);
+export default connect(null, { clearLikedJobs })(SettingsScreen);

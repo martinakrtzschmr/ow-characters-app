@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { View, ActivityIndicator } from 'react-native';
-import { MapView } from 'expo';
+import { MapView  } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
 import { Button } from 'react-native-elements';
 import * as actions from '../actions';
 
 class MapScreen extends Component {
+  static navigationOptions =  ({ navigation }) => ({
+    title: 'Map',
+    tabBarIcon: ({ focused, horizontal, tintColor }) => {
+      return <Ionicons name="md-pin" size={30} color={tintColor} />
+    }
+  });
+
   state = {
     mapLoaded: false,
     region: {
