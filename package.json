@@ -11,7 +11,7 @@
     "@expo/vector-icons": "^9.0.0",
     "axios": "^0.18.0",
     "babel": "^6.23.0",
-    "expo": "^32.0.0",
+    "expo": "^46.0.14",
     "expo-google-sign-in": "^2.0.0",
     "latlng-to-zip": "0.0.1",
     "lodash": "^4.17.11",
